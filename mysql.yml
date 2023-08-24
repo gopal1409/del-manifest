@@ -35,5 +35,5 @@ spec:
             claimName: task-pv-claim
         - name: usermgmt-db-script
           configMap: 
-            claimName: usermgmt-db-script
+            Name: usermgmt-db-script
     
