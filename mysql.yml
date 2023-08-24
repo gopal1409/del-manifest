@@ -24,3 +24,16 @@ spec:
 
         ports:
         - containerPort: 3306
+        volumeMounts:
+          - name: mysql-persistent-volume
+            mountPath: /var/lib/mysql
+          - name: usermgmt-db-script
+            mountPath: /docker-entrypoint-initdb.d
+      volumes: 
+        - name: mysql-persistent-volume
+          persistentVolumeClaim:
+            claimName: task-pv-claim
+        - name: usermgmt-db-script
+          configMap: 
+            claimName: usermgmt-db-script
+    
