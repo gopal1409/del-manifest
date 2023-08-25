@@ -1,7 +1,7 @@
 apiVersion: batch/v1 
 kind: Job 
 metadata:
-  name: node-app-job
+  name: node-app-job-1
 spec:
   #completions: 8
   parallelism: 8
