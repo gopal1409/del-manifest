@@ -1,0 +1,12 @@
+apiVersion: batch/v1 
+kind: Job 
+metadata:
+  name: node-app-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: node-app-job 
+        image: alpine 
+        command: ["echo","welcome to my node app"]
+      restartPolicy: Never
