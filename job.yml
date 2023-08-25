@@ -3,6 +3,8 @@ kind: Job
 metadata:
   name: node-app-job
 spec:
+  completions: 4
+  parallelism: 8 #the same job will be executed by 8 pod
   template:
     spec:
       containers:
