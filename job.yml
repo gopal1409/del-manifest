@@ -4,7 +4,9 @@ metadata:
   name: node-app-job-1
 spec:
   #completions: 8
-  parallelism: 8
+  parallelism: 8 #3suppose 8 parrelel pod is execute at the same time
+  backoffLimit: 2 #if while executing two pod get error. it will stop the execution
+  activeDeadlineSecond: 15 #max time limit to execute your job
   template:
     spec:
       containers:
